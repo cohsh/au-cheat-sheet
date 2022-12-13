@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Atomic Unit Cheat Sheet</title>
+        <link rel='stylesheet' href='style.css'>
+        <script>
+            MathJax = {
+                chtml: {
+                    matchFontHeight: false
+                },
+                tex: {
+                    inlineMath: [['$', '$']]
+                }
+            };
+        </script>
+        <script id="MathJax-script" async
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        </script>
+        <script type="text/javascript" src="main.js"></script>
+    </head>
+    <body>
+        <h2>Hartree Atomic Unit Cheat Sheet</h2>
+        <table>
+            <tr align='left'><th>Quantity</th><th>Atomic Unit</th><th>SI Unit</th></tr>
+            <tr><td id='action'></td><td id='action:AU'></td><td id='action:SIU'></td></tr>
+            <tr><td id='length'></td><td id='length:AU'></td><td id='length:SIU'></td></tr>
+            <tr><td id='mass'></td><td id='mass:AU'></td><td id='mass:SIU'></td></tr>
+            <tr><td id='electric charge'></td><td id='electric charge:AU'></td><td id='electric charge:SIU'></td></tr>
+            <tr><td id='electric current'></td><td id='electric current:AU'></td><td id='electric current:SIU'></td></tr>
+            <tr><td id='electric dipole'></td><td id='electric dipole:AU'></td><td id='electric dipole:SIU'></td></tr>
+            <tr><td id='electric field'></td><td id='electric field:AU'></td><td id='electric field:SIU'></td></tr>
+            <tr><td id='electric potential'></td><td id='electric potential:AU'></td><td id='electric potential:SIU'></td></tr>
+            <tr><td id='energy'></td><td id='energy:AU'></td><td id='energy:SIU'></td></tr>
+            <tr><td id='force'></td><td id='force:AU'></td><td id='force:SIU'></td></tr>
+            <tr><td id='magnetic flux density'></td><td id='magnetic flux density:AU'></td><td id='magnetic flux density:SIU'></td></tr>
+            <tr><td id='magnetic moment'></td><td id='magnetic moment:AU'></td><td id='magnetic moment:SIU'></td></tr>
+            <tr><td id='momentum'></td><td id='momentum:AU'></td><td id='momentum:SIU'></td></tr>
+            <tr><td id='permittivity'></td><td id='permittivity:AU'></td><td id='permittivity:SIU'></td></tr>
+            <tr><td id='time'></td><td id='time:AU'></td><td id='time:SIU'></td></tr>
+            <tr><td id='velocity'></td><td id='velocity:AU'></td><td id='velocity:SIU'></td></tr>
+        </table>
+        <script>
+            <!-- Order: Time, Length, Mass, Current -->
+            writeUnit('action', [-1,2,1,0])
+            writeUnit('length', [0,1,0,0])
+            writeUnit('mass', [0,0,1,0])
+            writeUnit('electric charge', [1,0,0,1])
+            writeUnit('electric current', [0,0,0,1])
+            writeUnit('electric dipole', [1,1,0,1])
+            writeUnit('electric field', [-3,1,1,-1])
+            writeUnit('electric potential', [-3,2,1,-1])
+            writeUnit('energy', [-2,2,1,0])
+            writeUnit('force', [-2,1,1,0])
+            writeUnit('magnetic flux density', [-2,0,1,-1])
+            writeUnit('magnetic moment', [0,2,0,1])
+            writeUnit('momentum', [-1,1,1,0])
+            writeUnit('permittivity', [4,-3,-1,2])
+            writeUnit('time', [1,0,0,0])
+            writeUnit('velocity', [-1,1,0,0])
+        </script>
+    </body>
+</html>

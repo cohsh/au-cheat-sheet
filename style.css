@@ -1,0 +1,7 @@
+table { width: 100%; }
+table td {
+	background: #eee;
+}
+table tr:nth-child(odd) td {
+	background: #fff;
+}
