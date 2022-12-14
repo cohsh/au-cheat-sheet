@@ -30,8 +30,20 @@ function _generateExpression(unit, dimensions) {
             result += basicUnits[i] + '^{' + dimensions[i].toString() + '}'
         } else if ( dimensions[i] == 1 ) {
             result += basicUnits[i]
+        } else {
+            continue
         }
-        result += ' '
+        let j = 0
+        for (let k = i + 1; k < 4; k++) {
+            if ( dimensions[k] != 0 ) {
+                j += 1
+            }
+        }
+        if (j != 0) {
+            result += ' \\cdot '
+        } else {
+            result += ' '
+        }
     }
     result += '$'
     return result
