@@ -1,5 +1,11 @@
 const basicSIU = ['\\mathrm{s}', '\\mathrm{m}', '\\mathrm{kg}', '\\mathrm{A}' ]
 const basicAU = ['\\hbar', 'a_0', 'm_\\mathrm{e}', 'e' ]
+const derivedSIU = { 'force':'\\mathrm{N}', 'electric charge':'\\mathrm{C}',
+                        'electric potential':'\\mathrm{V}', 'magnetic flux density':'\\mathrm{T}',
+                        'energy':'\\mathrm{J}', 'permittivity':'\\mathrm{\\mathrm{F \\cdot m^{-1}}}',
+                        'electric dipole':'\\mathrm{C \\cdot m}', 'electric field':'\\mathrm{V \\cdot m^{-1}}',
+                        'magnetic moment':'\\mathrm{J\\cdot T^{-1}}', 'momentum':'\\mathrm{N \\cdot s}',
+                        'action':'\\mathrm{J\\cdot s}'} 
 
 function _convertDimensions(SIUDimensions) {
     // SIU: Time, Length, Mass, Electric current
@@ -18,7 +24,7 @@ function _convertDimensions(SIUDimensions) {
     return  AUDimensions;
 }
 
-function _generateExpression(unit, dimensions) {
+function _generateExpression(quantity, unit, dimensions) {
     if (unit == 'SIU') {
         basicUnits = basicSIU
     } else if (unit == 'AU') {
@@ -45,6 +51,9 @@ function _generateExpression(unit, dimensions) {
             result += ' '
         }
     }
+    if (quantity in derivedSIU && unit == 'SIU') {
+        result += '~(' + derivedSIU[quantity] + ' )'
+    }
     result += '$'
     return result
 }
@@ -54,9 +63,9 @@ function writeUnit(quantity, dimensionsSIU) {
     const elementQuantity = document.getElementById(quantity);
     const elementSIU = document.getElementById(quantity+':SIU');
     const elementAU = document.getElementById(quantity+':AU');
-    const expressionSIU = _generateExpression('SIU', dimensionsSIU)
+    const expressionSIU = _generateExpression(quantity, 'SIU', dimensionsSIU)
     const dimensionsAU = _convertDimensions(dimensionsSIU)
-    const expressionAU = _generateExpression('AU', dimensionsAU)
+    const expressionAU = _generateExpression(quantity, 'AU', dimensionsAU)
     elementQuantity.innerHTML = quantity.slice(0, 1).toUpperCase() + quantity.slice(1) ;;
     elementSIU.innerHTML = expressionSIU;
     elementAU.innerHTML = expressionAU;
