@@ -6,9 +6,9 @@
 その次元を
 $[\mathrm{X}]=[\mathrm{s}]^{p_1}[\mathrm{m}]^{p_2}[\mathrm{kg}]^{p_3}[\mathrm{A}]^{p_4}= [\hbar]^{q_1}[a_0]^{q_2}[m_\mathrm{e}]^{q_3}[e]^{q_4}$
 と書くとき、
-$\mathbf{p}=[p_1~p_2~p_3~p_4]^T$と$\mathbf{q}=[q_1~q_2~q_3~q_4]^T$は一意に定まります。
+$\mathbf{p}=[p_1, p_2, p_3, p_4]^T$ と $\mathbf{q}=[q_1, q_2, q_3, q_4]^T$ は一意に定まります。
 
-そして$\mathbf{p}$と$\mathbf{q}$の間には
+そして $\mathbf{p}$ と $\mathbf{q}$ の間には
 $$
 \begin{bmatrix}
 -1 & 0 & 0 & 1 \\
