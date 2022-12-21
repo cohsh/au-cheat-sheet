@@ -14,8 +14,7 @@ $$
 [\mathrm{m}] \\
 [\mathrm{kg}] \\
 [\mathrm{A}]
-\end{bmatrix}
-=
+\end{bmatrix}=
 \begin{bmatrix}
 [\hbar] \\
 [a_0] \\
