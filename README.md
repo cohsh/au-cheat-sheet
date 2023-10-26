@@ -1,4 +1,7 @@
 # Atomic Units Cheat Sheet
+[![pages-build-deployment](https://github.com/cohsh/au-cheat-sheet/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/cohsh/au-cheat-sheet/actions/workflows/pages/pages-build-deployment)
+
+## Usage
 [cohsh.github.io/au-cheat-sheet](https://cohsh.github.io/au-cheat-sheet/)
 
 ## Feature
